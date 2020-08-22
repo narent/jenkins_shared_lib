@@ -5,3 +5,4 @@ interface BuildTestResult {
     void test()
     void result()
 }
+}
