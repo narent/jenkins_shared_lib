@@ -1,3 +1,5 @@
+package org.westpac
+
 class MvnBuildTestResult implements BuildTestResult{
     @Override
     void build() {
