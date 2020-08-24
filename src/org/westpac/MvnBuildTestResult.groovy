@@ -1,18 +1,23 @@
 package org.westpac
 
 public class MvnBuildTestResult implements BuildTestResult{
+    def jenkinsSteps
+    MvnBuildTestResult(jenkinsSteps) {
+        this.jenkinsSteps = jenkinsSteps
+    }
+
     @Override
     void build() {
-        println "Building maven project..."
+        this.jenkinsSteps.echo "Building maven project..."
     }
 
     @Override
     void test() {
-        println "Testing maven project..."
+        this.jenkinsSteps.echo "Testing maven project..."
     }
 
     @Override
     void result() {
-        println "Storing artifacts..."
+        this.jenkinsSteps.echo "Storing artifacts..."
     }
 }
