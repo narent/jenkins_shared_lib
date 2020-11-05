@@ -4,10 +4,12 @@ def call(Map config=[:], Closure body) {
         stages {
             stage('Configure execution') {
                 steps {
-                    currentBuild.displayName = "" + currentBuild.number + ". feature/AD10-Feature_name"
+                    script {
+                        currentBuild.displayName = "" + currentBuild.number + ". feature/AD10-Feature_name"
+                    }
                 }
             }
-            
+
             stage('Checkout') {
                 steps {
                     echo "checkout"
