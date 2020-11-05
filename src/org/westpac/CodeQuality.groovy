@@ -1,4 +1,4 @@
-package org.westpac
+package org.narent
 
 public class CodeQuality {
     def jenkinsSteps

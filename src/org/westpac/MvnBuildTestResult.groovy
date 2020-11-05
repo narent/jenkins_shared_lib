@@ -1,4 +1,4 @@
-package org.westpac
+package org.narent
 
 public class MvnBuildTestResult implements BuildTestResult{
     def jenkinsSteps

@@ -1,4 +1,4 @@
-package org.westpac
+package org.narent
 
 public class DotNetBuildTestResult implements BuildTestResult{
     def jenkinsSteps
