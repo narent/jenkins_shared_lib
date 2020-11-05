@@ -5,7 +5,7 @@ def call(Map config=[:]) {
             stage('Configure execution') {
                 steps {
                     script {
-                        currentBuild.displayName = "" + currentBuild.number + ". feature/AD10-Feature_name"
+                        currentBuild.displayName = "" + currentBuild.number + ". " + config.branchName
                     }
                 }
             }
@@ -45,13 +45,6 @@ def call(Map config=[:]) {
                     echo "mvn acceptance test"
                 }
             }
-
-            stage ('Publish artifact') {
-                steps {
-                    echo "mvn publish"
-                }
-            }            
-
         }
     }
 }
